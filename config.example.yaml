@@ -1,0 +1,105 @@
+# Lexi AI Configuration Example
+# This file demonstrates configurable parameters
+
+# Ethical Guardrails Configuration
+guardrails:
+  # Maximum recommendations to show per session
+  # Lower = less overwhelming, Higher = more choices
+  max_recommendations_per_session: 5
+  
+  # Maximum daily interactions before warning
+  # Prevents over-reliance on AI for decisions
+  max_daily_interactions: 50
+  
+  # Cooldown period in minutes for break suggestions
+  # System suggests break if too many interactions in this window
+  cooldown_period_minutes: 30
+  
+  # Maximum choices when combating decision fatigue
+  # Reduces overwhelming options to manageable number
+  max_decision_choices: 3
+
+# Recommendation Engine Configuration
+recommendations:
+  # Default number of recommendations
+  default_limit: 5
+  
+  # Confidence threshold for recommendations
+  # Only show recommendations with confidence above this level
+  min_confidence: 0.3
+  
+  # Enable/disable explanations for recommendations
+  explain_recommendations: true
+
+# Persona Configuration
+persona:
+  # Enable data persistence
+  save_to_disk: true
+  
+  # Data storage location
+  data_directory: "user_data"
+  
+  # Automatically load saved persona on initialization
+  auto_load: true
+  
+  # Track interaction history
+  track_history: true
+  
+  # Maximum history items to keep (for performance)
+  max_history_items: 1000
+
+# Privacy Settings
+privacy:
+  # Store data locally only (no external services)
+  local_only: true
+  
+  # Encrypt stored data (future feature)
+  encrypt_data: false
+  
+  # Allow data export
+  allow_export: true
+
+# Logging Configuration
+logging:
+  # Log level: DEBUG, INFO, WARNING, ERROR
+  level: "INFO"
+  
+  # Log to file
+  log_to_file: false
+  
+  # Log file location
+  log_file: "lexi_ai.log"
+
+# Feature Flags
+features:
+  # Enable ethical guardrails
+  ethical_guardrails: true
+  
+  # Enable decision fatigue combat
+  decision_fatigue_combat: true
+  
+  # Enable usage tracking
+  usage_tracking: true
+  
+  # Enable break suggestions
+  break_suggestions: true
+  
+  # Enable health reports
+  health_reports: true
+
+# Categories Configuration
+categories:
+  # Supported recommendation categories
+  supported:
+    - media
+    - style
+    - food
+    - general
+  
+  # Default category if none specified
+  default: "general"
+
+# Note: This is an example configuration file.
+# Lexi AI currently uses hardcoded defaults.
+# This file demonstrates how configuration could be structured
+# for future extensibility.

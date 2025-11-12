@@ -1,77 +1,77 @@
 # Lexi AI 🤖
-- **Status do Projeto:** (Protótipo Conceitual - Curso Potenc.IA | Criadoras do Futuro com IA)
+- **Project Status:** (Conceptual Prototype - Potenc.IA Course | Creators of the Future with AI)
 
-- Um protótipo de assistente de IA focado em recomendações éticas e hiper-personalizadas, construído com Streamlit e a API do Google Gemini.
+- A prototype of an AI assistant focused on ethical and hyper-personalized recommendations, built with Streamlit and the Google Gemini API.
 
-# 🎯 O Problema
-Na era da informação, sofremos com o **"paradoxo da escolha"** (ou fadiga de decisão). Algoritmos de recomendação atuais são superficiais e falham em dois pontos principais:
+# 🎯 The Problem
+In the information age, we suffer from the **"paradox of choice"** (or decision fatigue). Current recommendation algorithms are superficial and fail in two main points:
 
-1. **Ignoram Filtros Negativos:** Eles não entendem preferências de nicho ou restrições morais/éticas específicas (ex: "quero séries de romance, mas que não tenham cenas de violência gráfica").
+1. **They Ignore Negative Filters:** They don't understand niche preferences or specific moral/ethical restrictions (e.g., "I want romance series, but that don't have graphic violence scenes").
 
-2. **Geram Dependência:** Muitos sistemas de IA são projetados para maximizar o "engajamento", incentivando a dependência emocional e o uso excessivo, em vez de focar na eficiência.
+2. **They Generate Dependency:** Many AI systems are designed to maximize "engagement", encouraging emotional dependence and excessive use, instead of focusing on efficiency.
 
-# ✨ A Solução: A "Persona Virtual"
-Lexi AI resolve isso através de um sistema de "Persona Virtual" de duas camadas:
+# ✨ The Solution: The "Virtual Persona"
+Lexi AI solves this through a two-layer "Virtual Persona" system:
 
-1. **A "Persona-Mãe":** É o *SYSTEM_PROMPT* principal da IA. Ela contém os Guardrails Éticos (a regra de "não ser terapeuta"), a personalidade da IA (prestativa, mas não íntima) e a lógica de como ela deve construir a persona do usuário.
+1. **The "Mother-Persona":** It is the AI's main *SYSTEM_PROMPT*. It contains the Ethical Guardrails (the "don't be a therapist" rule), the AI's personality (helpful, but not intimate), and the logic of how it should build the user's persona.
 
-2. **A "Persona do Usuário":** É o perfil que o usuário constrói. Ele armazena não apenas gostos (*gosto de K-pop e cottage core*), mas principalmente seus filtros e limites (*odeio filmes de terror*, *amo séries sobre pés de galinha*).
+2. **The "User Persona":** It is the profile that the user builds. It stores not only tastes (*I like K-pop and cottage core*), but mainly their filters and boundaries (*I hate horror movies*, *I love series about chicken's feet*).
 
-O objetivo é ser uma ferramenta de eficiência: um "segundo cérebro" que economiza o tempo de pesquisa do usuário, para que ele possa usar seu tempo de descanso para descansar.
+The goal is to be an efficiency tool: a "second brain" that saves the user's research time, so they can use their rest time to rest.
 
-# 🚀 Funcionalidades Principais (do Protótipo)
-- **Interface de Chat:** Uma interface limpa e reativa construída com Streamlit.
+# 🚀 Main Features (of the Prototype)
+- **Chat Interface:** A clean and reactive interface built with Streamlit.
 
-- **Gestão de Segredos:** O projeto usa o *secrets.toml* do Streamlit e o *.gitignore* para proteger a chave da API e o "Prompt-Mãe", permitindo que o código seja público sem expor dados sensíveis.
+- **Secrets Management:** The project uses Streamlit's *secrets.toml* and *.gitignore* to protect the API key, allowing the code to be public without exposing sensitive data.
 
-- **Guardrails Éticos:** A IA é instruída (via "Persona-Mãe") a identificar e redirecionar conversas que saem do escopo de recomendações (como pedidos de terapia), visando a saúde mental do usuário.
+- **Ethical Guardrails:** The AI is instructed (via the "Mother-Persona") to identify and redirect conversations that go out of the scope of recommendations (like requests for therapy), aiming for the user's mental health.
 
-- **Chat Persistente:** O histórico da conversa é salvo na sessão (usando *st.session_state*).
+- **Persistent Chat:** The conversation history is saved in the session (using *st.session_state*).
 
-# 🧠 Conceitos-Chave (Arquitetura Futura)
-Este protótipo prova a "Fase 0", mas o design completo do projeto (discutido na concepção) prevê um sistema mais robusto:
+# 🧠 Key Concepts (Future Architecture)
+This prototype proves "Phase 0", but the project's complete design (discussed in the conception) envisions a more robust system:
 
-- **O "Robô Invisível" (Backend):** Um processo assíncrono que faria a coleta de dados (Data Scraping) em mídias sociais (ex: "edits de fãs" no TikTok) e fóruns (ex: MyDramaList).
+- **The "Invisible Robot" (Backend):** An asynchronous process that would perform data collection (Data Scraping) on social media (e.g., "fan edits" on TikTok) and forums (e.g., MyDramaList).
 
-- **Descoberta de Tópicos (Topic Modeling):** Em vez de usar tags pré-definidas, o "Robô" usaria IA para descobrir tags relevantes (como "engraçado" ou "hot edit") analisando a frequência de palavras nas discussões de fãs, permitindo recomendações de nicho.
+- **Topic Discovery (Topic Modeling):** Instead of using predefined tags, the "Robot" would use AI to discover relevant tags (like "funny" or "hot edit") by analyzing word frequency in fan discussions, allowing for niche recommendations.
 
-# 🛠️ Tecnologias Utilizadas
+# 🛠️ Technologies Used
 - **Python**
 
-- **Streamlit** (Para a interface web)
+- **Streamlit** (For the web interface)
 
-- **Google Gemini API** (Para o cérebro da IA)
+- **Google Gemini API** (For the AI's brain)
 
-- **GitHub Codespaces** (Como ambiente de desenvolvimento na nuvem)
+- **GitHub Codespaces** (As a cloud development environment)
 
-# 🏃‍♀️ Como Executar o Protótipo
-Este projeto foi desenvolvido para rodar facilmente no GitHub Codespaces.
+# 🏃‍♀️ How to Run the Prototype
+This project was developed to run easily on GitHub Codespaces.
 
-1. **Inicie o Codespace:** Abra este repositório em um novo Codespace.
+1. **Start the Codespace:** Open this repository in a new Codespace.
 
-2. **Crie seus Segredos:**
+2. **Create your Secrets:**
 
-  - Crie uma nova pasta na raiz do projeto chamada *.streamlit*.
-    
-  - Dentro dela, crie um arquivo chamado *secrets.toml*.
-    
-  - Cole nesse arquivo sua API key e o "Prompt-Mãe".
+    - Create a new folder in the project root called *.streamlit*.
+      
+    - Inside it, create a file called *secrets.toml*.
+      
+    - Paste your API key into this file.
 
-3. **Instale as Dependências:**
+3. **Install the Dependencies:**
 
-  - Crie um arquivo *requirements.txt* e adicione *streamlit* e *google-generativeai*.
-  
-  - No terminal do Codespaces, rode: *pip install -r requirements.txt*
+    - Create a *requirements.txt* file and add *streamlit* and *google-generativeai*.
+      
+    - In the Codespaces terminal, run: *pip install -r requirements.txt*.
 
-4. **Rode o App:**
+4. **Run the App:**
+   
+    - In the terminal, run: *streamlit run app.py*.
+      
+    - Codespaces will notify you to open the application in a new browser tab.
 
-  - No terminal, rode: *streamlit run app.py*
-  
-  - O Codespaces irá notificá-lo para abrir o aplicativo em uma nova aba do navegador.
+# 📆 Next Steps (Future Phases)
+- **[Phase 1 - Media]:** Expand the prototype to connect to real databases (like Common Sense Media) to validate the filters.
 
-# 🔮 Próximos Passos (Fases Futuras)
-- **[Fase 1 - Mídia]:** Expandir o protótipo para se conectar a bancos de dados reais (como Common Sense Media) para validar os filtros.
+- **[Phase 2 - Style and Shopping]:** Implement Computer Vision (CV) so the AI can analyze photos of clothes and recommend outfits based on styles (Cottage Core, Y2K).
 
-- **[Fase 2 - Estilo e Compras]:** Implementar Visão Computacional (CV) para que a IA possa analisar fotos de roupas e recomendar looks com base em estilos (Cottage Core, Y2K).
-
-- **[Fase 3 - O Robô]:** Construir o "Robô Invisível" (backend worker) para fazer a coleta de dados e a descoberta de tópicos em tempo real.
+- **[Phase 3 - The Robot]:** Build the "Invisible Robot" (backend worker) to perform data collection and topic discovery in real-time.

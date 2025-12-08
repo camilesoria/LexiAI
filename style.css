@@ -1,4 +1,4 @@
-/* STEP 1: IMPORT THE FONT (The missing part!) */
+/* STEP 1: IMPORT THE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* The config.toml handles the background, but we style the bubbles */
@@ -12,12 +12,12 @@
 /* User's Bubble (User) */
 [data-testid="stChatMessage"]:has([data-testid="chatAvatarAvatarUser"]) {
     background-color: #39537f; 
-    color: #000000; /* Black text (to read on the light background) */
+    color: #f0f0f0; /* Black text (to read on the light background) */
 }
 
 /* Assistant's Bubble (AI) */
 [data-testid="stChatMessage"]:has([data-testid="chatAvatarAvatarAssistant"]) {
     background-color: #402b55; 
     border: 1px solid #E0E0E0; 
-    color: #000000; /* Black text (to read on the light background) */
+    color: #f0f0f0; /* Black text (to read on the light background) */
 }

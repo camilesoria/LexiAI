@@ -36,6 +36,13 @@ This prototype proves "Phase 0", but the project's complete design (discussed in
 * **Google Gemini API** (For the AI's brain)
 * **GitHub Codespaces** (As a cloud development environment)
 
+# 🤖 Development Methodology & Transparency
+This project adopts an **AI-First approach**, where I acted as the Technical Product Manager and Prompt Engineer.
+
+* **Core Logic (Human-in-the-Loop):** The Python code was generated with the assistance of **Google Gemini**, guided by my specific architectural requirements (the "Mother-Persona" system). I was responsible for supervising, reviewing, and iterating on the code to ensure the logic met the project's ethical goals.
+* **Frontend (Manual Effort):** The CSS styling was manually written by me to achieve a custom look and dark theme (currently a work in progress), demonstrating a desire to customize the interface beyond standard Streamlit defaults.
+* **Educational Goal:** The primary focus of this prototype was to exercise **Product Conception** and **Prompt Engineering**, leveraging AI as a tool to accelerate the coding phase while maintaining strict human control over the final output.
+
 # 🏃‍♀️ How to Run the Prototype
 This project was developed to run easily on GitHub Codespaces or locally.
 
